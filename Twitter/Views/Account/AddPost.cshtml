@@ -1,0 +1,57 @@
+﻿@model Twitter.Models.AddPostModel
+@{
+    ViewBag.Title = "Создание поста";
+}
+<link href="~/Content/index-styles.css" rel="stylesheet" />
+<link href="~/Content/add-post.css" rel="stylesheet" />
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+    <div class="main-container">
+        <div class="main-col">
+            <div class="col-66">
+
+                <div class="add-main-box" style="font-size:10px;">
+                    <div class="col-full add-title">
+                        <h3>Add New Post</h3>
+                    </div>
+                    <div class="col-half">
+
+                        <div class="add-text-box">
+                            <form method="post" class="add-form">
+                                <div class="row">
+                                    <div class="col-full">
+                                        <div class="input-box">
+                                            <label for="add-hashtags" class="add-label">Add photo link</label>
+                                            @Html.TextAreaFor(x => x.PhotoLink, new { @id = "add-post", @class = "input-text" })
+                                        </div>
+                                    </div>
+                                    <div class="col-full">
+                                        <div class="input-box">
+                                            <label for="add-post" class="add-label">What's happening?</label>
+                                            @Html.TextAreaFor(x => x.Description, new { @id = "add-post", @class = "input-post-text", @rows = "10", @cols = "45", @wrap = "hard" })
+                                        </div>
+                                    </div>
+
+                                    <div class="col-full">
+                                        <div class="input-box">
+                                            <label for="add-hashtags" class="add-label">Add some tags</label>
+                                            @Html.TextAreaFor(x => x.Tags, new { @id = "add-hashtags", @class = "input-text" })
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+                    <div class="col-full add-btn-box">
+                        <button type="submit" onclick="location.href='@Url.Action("Index", "Account")'" class="add-btn">
+                            Tweet
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

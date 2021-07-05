@@ -1,0 +1,57 @@
+﻿@model Twitter.Models.Post
+@{
+    ViewBag.Title = "Изменение поста";
+}
+<link href="~/Content/index-styles.css" rel="stylesheet" />
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <div class="main-container">
+        <div class="main-col">
+            <div class="col-66">
+
+                <div class="add-main-box" style="font-size:10px;">
+                    <div class="col-full add-title">
+                        <h3>Edit Post</h3>
+                    </div>
+                    <div class="col-half">
+
+                        <div class="add-text-box">
+                            <form method="post" class="add-form">
+                                <div class="row">
+                                    <div class="col-full">
+                                        <div class="input-box">
+                                            <label for="add-hashtags" class="add-label">Edit photo link</label>
+                                            @Html.EditorFor(x => x.PhotoLink, new { @class = "input-post-text", @id = "add-post", @style = "fontsize: 20px;" })
+                                        </div>
+                                    </div>
+                                    <div class="col-full">
+                                        <div class="input-box">
+                                            <label for="add-post" class="add-label">Edit text</label>
+                                            @Html.EditorFor(x => x.Description, new { htmlAttributes = new { @class = "input-post-text", @cols = 30, @rows = 3, @id = "add-post" } })
+                                        </div>
+                                    </div>
+
+                                    <div class="col-full">
+                                        <div class="input-box">
+                                            <label for="add-hashtags" class="add-label">Edit tags</label>
+                                            @Html.EditorFor(x => x.Tags, new { @id = "add-hashtags", @class = "input-text" })
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                    @Html.HiddenFor(x => x.Id)
+                    <div class="col-full add-btn-box">
+                        <button type="submit" onclick="location.href='@Url.Action("EditPost", "Account")'" class="add-btn">
+                            SAVE
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@Styles.Render("~/Content/edit-post-styles.css")

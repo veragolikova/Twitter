@@ -1,0 +1,16 @@
+﻿.main-container {
+    background-size: cover;
+    background-image: url('images/add-post.jpg');
+    /*background-image: url('images/background-add-post.jpg');*/
+/*    background-image: url('images/contact-us-background.jpg');*/
+    /*background-attachment: fixed;*/
+}
+.main-col{
+margin-bottom: 20px;
+}
+footer{
+    margin-top:0px;
+}
+.add-label{
+    font-size:22px;
+}

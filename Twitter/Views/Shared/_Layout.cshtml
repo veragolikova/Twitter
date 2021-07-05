@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="Content/index-styles.css" rel="stylesheet" />
+    <link href="Content/contact-styles.css" rel="stylesheet" />
+    <link href="~/Content/add-post-styles.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/Content/fonts.css">
+    <link rel=" shortcut icon" href="~/Content/images/Twitter_Logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="header-logo-col">
+            <a href='@Url.Action("Index", "Account")'>
+                <img class="img-logo" src='@Url.Content("~/Content/images/twitter-logo.png")' />
+            </a>
+        </div>
+        <nav class="header-flex-box">
+            <div class="header-menu">
+                <div class="menu-col ">
+                    <div class="menu-href">
+                        @Html.ActionLink("HOME", "Index", "Account", new { @style = "text-decoration: none; color:white;" })
+                    </div>
+                </div>
+                <div class="menu-col">
+                    <div class="menu-href">
+                        @Html.ActionLink("CONTACT", "Contact", "Account", new { @style = "text-decoration: none; color:white;" })
+                    </div>
+                </div>
+
+            </div>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <div class="header-add-col">
+                    <button type="button" onclick="location.href='@Url.Action("AddPost", "Account")'" class="header-add-button">
+                        <img src="~/Content/images/add_blue.png" alt="header-logo" style="height:30px;width:30px;">
+                        ADD POST
+                    </button>
+                </div>
+                <div class="header-username-col">@Html.Encode("@")@User.Identity.Name.ToUpper()</div>
+            }
+            <div class="header-log-col">
+                @if (!User.Identity.IsAuthenticated)
+                {
+                    @Html.ActionLink(" LOG IN ", "Login", "Account", new { @id = "login", @class = "header-button", @style = "text-decoration: none;" })
+                }
+                @if (User.Identity.IsAuthenticated)
+                {
+                    @Html.ActionLink(" LOG OUT ", "Logoff", "Account", new { @id = "logout", @class = "header-button", @style = "text-decoration: none;" })
+                }
+            </div>
+        </nav>
+    </header>
+    <div class="container body-content">
+        @RenderBody()
+        <footer>
+            <ul class="footer-ul font-footer">
+                <li class="footer-li-1">
+                    <img class="footer-img-logo" src="~/Content/images/logo-footer.png" alt="logo">
+                </li>
+
+                <li class="footer-li-4">
+                    verag0lik0va22@gmail.com </br>
+                </li>
+
+                <li class="footer-li-3">Голикова Вера</li>
+
+                <li class="footer-li-5">18.02.2021</li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>
+@RenderSection("scripts", required: false)

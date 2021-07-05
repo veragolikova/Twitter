@@ -1,0 +1,61 @@
+﻿@model Twitter.Models.Contact
+@{
+    ViewBag.Title = "Contact Us";
+}
+<link href="~/Content/index-styles.css" rel="stylesheet" />
+<link href="~/Content/contact-styles.css" rel="stylesheet" />
+@if (ViewBag.msg != null)
+{
+    <div class="alert-success">@ViewBag.msg</div>
+}
+@using (Html.BeginForm())
+{
+    <div class="main-container">
+        <div class="main-col">
+            <div class="col-50-1">
+                <div class="contact-stripped-box">
+                    <div class="contact-main-box">
+
+                        <div class="contact-title col-full">
+                            <h3>Get In Touch</h3>
+                        </div>
+
+                        <form class="contact-form" method="post">
+                            <div class="row">
+                                <div class="col-half mb-20">
+                                    <div class="contact-input">
+                                        <label for="contact-name" class="contact-label"> Name</label>
+                                        <input name="Name" id="contact-name" type="text" class="input-name" />
+                                    </div>
+                                </div>
+                                <div class="col-half mb-20">
+                                    <div class="contact-input">
+                                        <label for="contact-email" class="contact-label"> Email</label>
+                                        <input name="Email" id="contact-email" type="email" class="input-email" />
+                                    </div>
+                                </div>
+                                <div class="col-half mb-20">
+                                    <div class="contact-input">
+                                        <label for="contact-title" class="contact-label"> Subject</label>
+                                        <input name="Subject" id="contact-title" type="text" class="input-title" />
+                                    </div>
+                                </div>
+                                <div class="col-full mb-20">
+                                    <div class="contact-input">
+                                        <label for="contact-text" class="contact-label"> Message </label>
+                                        <textarea name="Message" id="contact-text" type="text" class="input-text"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="col-full contact-btn-box">
+                            <button type="submit" onclick="email()" class="contact-btn">
+                                Send
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

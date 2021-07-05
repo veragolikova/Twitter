@@ -1,0 +1,80 @@
+
+*, *:after, *:before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Barlow-Medium, sans-serif;
+    font-weight: 0;
+    font-size: 20px;
+    background: transparent;
+}
+
+main{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    min-height: 100%;
+    margin-bottom: -90px;
+}
+ul{
+    list-style: none;
+    display: block;
+}
+a{
+    text-decoration: none;
+    outline: none;
+    color: black;
+}
+a:hover:before{
+    color: #2EE59D;
+}
+img{
+    display: block;
+    pointer-events: none;
+}
+html{
+    height: 100%;
+}
+body {
+    font-family: Star Wars, fantasy;
+    display: block;
+    justify-content: center;
+    background: #f4f4f4;
+    font-size: 14px;
+    line-height: 1;
+    color: #373737;
+    height: 100%;
+
+    min-width: 500px;
+}
+.main-container{
+    margin-bottom:50px;
+    margin-top:95px;
+}
+.error-message{
+    text-align: left;
+    border: 1px solid rgb(255, 255, 255);
+    margin: auto;
+    background: rgb(14, 77, 129); /* Цвет фона  rgba(144, 214, 241, 0.9); */
+
+    /*width: 60%;*/
+
+}
+    .error-message img {
+        margin: auto;
+        width: 495px;
+        height:auto;
+    }
+.error-message-text{
+    padding: 10px; /* Поля вокруг текста */
+    color:white; /* Цвет текста */
+    padding: 10px; /* Поля вокруг текста */
+    font-size: 30px;
+
+    font-family:'Oswald-ExtraLight';
+    font-weight: 500;
+}
+footer {
+    display: none;
+}
+

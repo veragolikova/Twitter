@@ -1,0 +1,61 @@
+
+@font-face{
+    font-family: Oswald-ExtraLight;
+    src:url('/Content/fonts/Oswald-ExtraLight.ttf');
+}
+
+@font-face{
+    font-family:Poppins-Regular;
+    src:url(fonts/Poppins/Poppins-Regular.ttf)
+}
+@font-face{
+    font-family:Poppins-Medium;
+    src:url(fonts/Poppins/Poppins-Medium.ttf)}
+@font-face{
+    font-family:Poppins-Bold;
+    src:url(fonts/Poppins/Poppins-Bold.ttf)
+}
+@font-face{
+    font-family:Poppins-SemiBold;
+    src:url(fonts/Poppins/Poppins-SemiBold.ttf)
+}
+@font-face{
+    font-family:Poppins-Thin;
+    src:url(fonts/Poppins/Poppins-Thin.ttf)
+}
+@font-face{
+    font-family:Poppins-Light;
+    src:url(fonts/Poppins/Poppins-Light.ttf)
+}
+@font-face{
+    font-family:Poppins-Italic;
+    src:url(fonts/Poppins/Poppins-Italic.ttf)
+}
+
+@font-face{
+    font-family:Barlow-Regular;
+    src:url(fonts/Barlow/Barlow-Regular.ttf)
+}
+@font-face{
+    font-family:Barlow-Medium;
+    src:url(fonts/Barlow/Barlow-Medium.ttf)}
+@font-face{
+    font-family:Barlow-Bold;
+    src:url(fonts/Barlow/Barlow-Bold.ttf)
+}
+@font-face{
+    font-family:Barlow-SemiBold;
+    src:url(fonts/Barlow/Barlow-SemiBold.ttf)
+}
+@font-face{
+    font-family:Barlow-Thin;
+    src:url(fonts/Barlow/Barlow-Thin.ttf)
+}
+@font-face{
+    font-family:Barlow-Light;
+    src:url(fonts/Barlow/Barlow-Light.ttf)
+}
+@font-face{
+    font-family:Barlow-Italic;
+    src:url(fonts/Barlow/Barlow-BlackItalic.ttf)
+}

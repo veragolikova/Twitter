@@ -1,0 +1,73 @@
+﻿@model List<Twitter.Models.Post>
+@{
+    ViewBag.Title = "Twitter";
+}
+<div class="main-container">
+    <article class="main-col">
+        <div class="main-box-inline-block">
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                var post = Model[i];
+                <section class="card-box">
+                    <div class="card-main-col">
+                        <div class="card-main-box">
+
+                            <div class="card-text-bottom-left">
+                                <p class="card-text-user"> @post.User.Name </p>
+                                <p class="card-text-time"> @post.CreatedAt.ToShortDateString()</p>
+                            </div>
+                            @if (post.PhotoLink != null)
+                            {
+                                <div class="card-main-part">
+
+                                    <div class="card-img">
+                                        <img src=@post.PhotoLink alt="photo" class="object-fit_contain">
+                                    </div>
+
+
+                                    <div class="card-text-box">
+                                        <div class="post-info">
+                                            <p class="post-text">
+                                                @post.Description
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="card-text-box">
+                                    <div class="post-info">
+                                        <p class="post-text">
+                                            @post.Description
+                                        </p>
+                                    </div>
+                                </div>
+                            }
+                            @if (post.Tags != null)
+                            {
+                                <div class="card-hashtags">
+                                    @post.Tags
+                                </div>
+                            }
+
+                        </div>
+                    </div>
+                    @if (User.Identity.Name == post.User.Name)
+                    {
+                        <div class="card-buttons-col">
+                            <button type="submit" onclick="location.href='@Url.Action("EditPost", "Account", new { Id = post.Id })'" class="card-edit-button"></button>
+                            <button type="submit" onclick="location.href='@Url.Action("Delete", "Account", new { Id = post.Id })'" class=" card-delete-button"></button>
+                        </div>
+                    }
+
+                </section>
+                <div></div>
+            }
+        </div>
+        <div class="push"> </div>
+    </article>
+</div>
+
+@Styles.Render("~/Content/index-styles.css")
