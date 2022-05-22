@@ -1,4 +1,109 @@
-# Социальная сеть для обмена короткими заметками (напободие "Twitter")
+# Social network for sharing short notes (like "Twitter")
+
+Social network for sharing short notes (ASP.NET MVC)
+
+- Users:
+   
+__Guest__: Unauthorized network user. All users are guests by default.
+ 
+   __User__: Authorized user. All authorized users and their logins/passwords are added on the server manually by the developer; network users do not have the ability to change them.
+
+- Social network pages
+
+    Home / Post feed (Index)
+
+    Authorization form (Register, Login)
+
+    Form for adding/editing a post (AddPost, EditPost)
+
+  All screens contain the following elements:
+
+      Login button / Username / Logout button
+
+      Add post button
+
+      Footer
+
+  The _authorization / Username / Exit button_ button look like this:
+
+      For an unauthorized user, an authorization button is displayed. After clicking on the button, the user goes to the "Authorization Form" Page
+
+      For an authorized user, the username and logout button are displayed. After clicking on the button, the user becomes unauthorized and goes to the "Home / Post Feed" Page.
+
+  The _Add post_ button is displayed for the authorized user. After clicking on the button, the user goes to the “Add/Edit Post Form” Page
+
+  - __Page "Main / Post feed"__
+
+  Contains the following elements:
+
+      Post feed
+
+  All posts in the feed are sorted by the date they were added. Recently added - at the top of the feed. Each post from the list displays:
+
+      - Photograph (if any)
+      - Author's name
+      - Date added
+      - Short description
+      - List of hashtags
+
+
+  For authorized users, the following is also displayed:
+
+      - Post edit button
+      - Post delete button
+
+
+  An authorized user can edit HIS posts. After clicking on the edit post button, the user goes to the "Edit Post Form" page. Also, an authorized user can delete his post.
+
+  - __Authorization Form Page__
+
+  The page contains the following elements:
+
+      Authorization form
+
+   The authorization form contains the following form fields:
+
+        - Login (required)
+        - Password (required)
+
+  The page is only accessible to unauthorized users. After authorization, the user goes to the Main Page / Post Feed.
+
+
+  - __Page "Add/Edit Post Form"__
+
+  The page contains the following elements:
+
+    	Form for adding/editing a post
+
+  The form for adding/editing a post contains the following form fields:
+
+      - Button to upload a photo (links to photos) (optional)
+      - Author name (non-editable): Author name is the user's login
+      - List of tags
+      - Date added (non-editable): The current date at the time the post was added. Added when creating a post automatically
+      - Short Description(required): Short description of the post for the Post Feed
+
+
+  The page is available only to authorized users. After adding a post, the user goes to the "Home / Post Feed" Page.
+
+- __Contact Page__
+
+  The page contains the following elements:
+
+    	Form for sending a message / letter to support
+
+  The form for sending a message contains the following form fields:
+
+      -	Sender's name
+      - Email of the sender: To be able to contact him and reply
+      - Message subject (Subject)
+      -	Text of the letter
+
+  The page is available to all users. When the message is successfully sent, a notification about it appears on the sending page.
+
+_______________________________________________________________________________________________________________________________________________________________________
+
+
 Социальная сеть для обмена короткими заметками (ASP.NET MVC)
 
 - Пользователи: 
