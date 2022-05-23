@@ -2,6 +2,8 @@
 
 Social network for sharing short notes (ASP.NET MVC)
 
+# Description
+
 - Users:
    
 __Guest__: Unauthorized network user. All users are guests by default.
@@ -100,6 +102,37 @@ __Guest__: Unauthorized network user. All users are guests by default.
       -	Text of the letter
 
   The page is available to all users. When the message is successfully sent, a notification about it appears on the sending page.
+
+# Examples of pages
+
+__1. Main page where users can post their notes.__
+
+![1](https://user-images.githubusercontent.com/70706111/169801829-a457a7f3-e305-44b4-9f9c-23fa827f7fc8.png)
+![2](https://user-images.githubusercontent.com/70706111/169801831-f52c968e-9e64-49d9-8010-83dee6c72e7a.png)
+![3](https://user-images.githubusercontent.com/70706111/169801833-a239ec86-2fc4-4144-b5ab-e907807e874d.png)
+
+__2. Authorization and registration forms__
+
+![4](https://user-images.githubusercontent.com/70706111/169801835-a4ded518-cfd4-4726-8ae4-a97737e5d04f.png)
+
+
+![5](https://user-images.githubusercontent.com/70706111/169801836-2b200ac1-f321-476b-8338-30a4cd271645.png)
+ 
+__3. Form of adding/editing a post__
+
+
+![6](https://user-images.githubusercontent.com/70706111/169801841-7e3923af-4279-4234-aeeb-d412c935120d.png)
+![7](https://user-images.githubusercontent.com/70706111/169801843-e20bb166-32e6-4ab3-bad0-d76c775ae346.png)
+
+
+![8](https://user-images.githubusercontent.com/70706111/169801845-18301f9f-e961-42b7-814f-eed187c0b691.png)
+![9](https://user-images.githubusercontent.com/70706111/169801851-e3c53557-df64-4c01-bc66-d9574c7e11ac.png)
+      
+
+__4. Error__
+
+![10](https://user-images.githubusercontent.com/70706111/169801855-ec396267-e763-4f8b-9af1-ad6b0914af83.png)
+
 
 _______________________________________________________________________________________________________________________________________________________________________
 
